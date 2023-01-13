@@ -6,8 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: colors.blue,
+        primary: colors.purple,
         secondary: colors.pink,
+        brand: {
+          light: '#a27ec0',
+          dark: '#652466',
+        },
       },
       fontFamily: {
         sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],

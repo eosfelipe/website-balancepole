@@ -18,85 +18,63 @@ const meta = {
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
+
+const response = await fetch(
+  'https://balancepolefitness.com/n/public/api/lessons'
+);
+const data = await response.json();
+const featuresData = data
+  .filter((d) => d.active === '1')
+  .map((i) => {
+    return {
+      title: `${i.type} - ${i.name}`,
+      description: i.description,
+      icon: 'tabler:bulb',
+    };
+  });
+const leftData = featuresData.splice(0, featuresData.length / 2);
+const rightData = featuresData.splice(0, featuresData.length);
 ---
 
 <Layout {meta}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction={{
+      text: 'Obtén tu clase muestra',
+      href: '#',
+      icon: 'tabler:award',
+    }}
+    callToAction2={{ text: 'Conócenos', href: '#features' }}
+    image={{
+      src: import('~/assets/images/hero.jpg'),
+      alt: 'Hero Balance Pole Fitness',
+    }}
   >
     <Fragment slot="title">
-      Your website with <span>Astro</span> + <span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Your website with <span>Pole</span> + <span class="sm:whitespace-nowrap"
+        >Aerial</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold underline decoration-wavy decoration-1 decoration-primary-600 underline-offset-2"
-          >AstroWind</span
-        > is a free, production-ready template to start your new website using <em>Astro</em> + <em>Tailwind CSS</em
-        >.</span
+        <span
+          class="font-semibold underline decoration-wavy decoration-1 decoration-primary-600 underline-offset-2"
+          >Balance Pole Fitness</span
+        > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non adipisci
+        dolore porro? <em>Pole</em> + <em>Aerial Skills</em>.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-primary-600">AstroWind: Free template.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-primary-600"
+        >Balance Pole Fitness.</span
+      > Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima maxime tempore
+      eligendi consequuntur!
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
   <Note />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
-    items={[
-      [
-        {
-          title: 'Astro + Tailwind CSS Integration',
-          description:
-            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-          icon: 'tabler:brand-tailwind',
-        },
-        {
-          title: 'Ready-to-use Components',
-          description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-          icon: 'tabler:components',
-        },
-        {
-          title: 'Best Practices',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:list-check',
-        },
-      ],
-      [
-        {
-          title: 'Excellent Page Speed',
-          description:
-            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-          icon: 'tabler:rocket',
-        },
-        {
-          title: 'Search Engine Optimization (SEO)',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:arrows-right-left',
-        },
-        {
-          title: 'Open to new ideas and contributions',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:bulb',
-        },
-      ],
-    ]}
-  />
 
   <!-- Content Widget **************** -->
 
@@ -125,6 +103,15 @@ const meta = {
       src: import('~/assets/images/caos.jpg'),
       alt: 'Colorful Image',
     }}
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    highlight="Clases"
+    title="Nuestras Clases"
+    subtitle="Todas nuestras clases son impartidas por instructoras capacitadas y en constante entrenamiento. Te describimos los diferentes estilos de pole que impartimos y recomendamos ampliamente darle importancia a las clases complementarias para mejorar tu rendimiento en el Pole"
+    items={[leftData, rightData]}
   />
 
   <!-- Content Widget **************** -->
@@ -308,7 +295,8 @@ const meta = {
             "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
         },
         {
-          question: 'If you could only ask one question to each person you meet, what would that question be?',
+          question:
+            'If you could only ask one question to each person you meet, what would that question be?',
           answer:
             "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
         },
@@ -337,12 +325,15 @@ const meta = {
     }}
   >
     <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap"
+        >Tailwind CSS</span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Be very surprised by these huge fake numbers you are seeing on this page. <br
+        class="hidden md:inline"
+      />Don't waste more time! :P
     </Fragment>
   </CallToAction>
 </Layout>
