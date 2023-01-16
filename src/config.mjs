@@ -23,8 +23,8 @@ const CONFIG = {
     timeZone: 'UTC',
   }),
 
-  googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: '',
+  googleAnalyticsId: false, // or "UA-67579025-1",
+  googleSiteVerificationId: 'iR3LWUsqqvs3IyWQIax9qC0pMkEloM9FE-BMGgki4Nk',
 
   blog: {
     disabled: true,

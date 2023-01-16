@@ -15,6 +15,7 @@ export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
 }
 
+const year = +new Date().getFullYear() - 2011;
 const defaultImage = SITE.defaultImage
   ? (
       await getImage({
@@ -28,7 +29,7 @@ const defaultImage = SITE.defaultImage
 
 const {
   title = SITE.name,
-  description = '',
+  description = `Estudio de Pole Fitness especializado en la enseñanza de este deporte en la ciudad de Mérida, Yucatán. Contamos con ${year} años de experiencia y el mejor equipo de instructoras certificadas internacionalmente para tu mejor preparación en la práctica de este deporte. #LoveBalancePole`,
   image: _image = defaultImage,
 
   canonical = getCanonical(String(Astro.url.pathname)),
@@ -51,11 +52,28 @@ const image =
 ---
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, user-scalable=no"
+/>
 <meta name="theme-color" content="#a27ec0" />
-<link rel="apple-touch-icon" sizes="180x180" href={getPermalink('/apple-touch-icon.png')} />
-<link rel="icon" type="image/png" sizes="32x32" href={getPermalink('/favicon-32x32.png')} />
-<link rel="icon" type="image/png" sizes="16x16" href={getPermalink('/favicon-16x16.png')} />
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href={getPermalink('/apple-touch-icon.png')}
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href={getPermalink('/favicon-32x32.png')}
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href={getPermalink('/favicon-16x16.png')}
+/>
 <link rel="manifest" href={getPermalink('/manifest.json')} />
 
 <AstroSeo
@@ -90,12 +108,27 @@ const image =
 <Fonts />
 
 <!-- Google Site Verification -->
-{SITE.googleSiteVerificationId && <meta name="google-site-verification" content={SITE.googleSiteVerificationId} />}
+{
+  SITE.googleSiteVerificationId && (
+    <meta
+      name="google-site-verification"
+      content={SITE.googleSiteVerificationId}
+    />
+  )
+}
 
 <!-- Google Analytics -->
-{SITE.googleAnalyticsId && <GoogleAnalytics id={String(SITE.googleAnalyticsId)} partytown={true} />}
+{
+  SITE.googleAnalyticsId && (
+    <GoogleAnalytics id={String(SITE.googleAnalyticsId)} partytown={true} />
+  )
+}
 
-{SITE.splitbeeAnalytics?.enabled && <SplitbeeAnalytics {...SITE.splitbeeAnalytics} />}
+{
+  SITE.splitbeeAnalytics?.enabled && (
+    <SplitbeeAnalytics {...SITE.splitbeeAnalytics} />
+  )
+}
 
 <!-- <link rel="shortcut icon" href={getPermalink('/favicon.ico')} />
 <link rel="icon" type="image/svg+xml" href={getPermalink('/favicon.svg')} />

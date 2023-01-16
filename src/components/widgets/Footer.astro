@@ -50,11 +50,16 @@ const links = [
 ];
 
 const social = [
-  { label: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
-  { label: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-  { label: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-  { label: 'RSS', icon: 'tabler:rss', href: getPermalink('/rss.xml') },
-  { label: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+  {
+    label: 'Instagram',
+    icon: 'tabler:brand-instagram',
+    href: 'https://www.instagram.com/balancepolefitness/',
+  },
+  {
+    label: 'Facebook',
+    icon: 'tabler:brand-facebook',
+    href: 'https://www.facebook.com/BalancePoleFitness',
+  },
 ];
 ---
 
@@ -63,23 +68,27 @@ const social = [
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>AstroWind</a>
+          <a class="inline-block font-bold text-xl" href={getHomePermalink()}
+            >Balance Pole Fitness</a
+          >
         </div>
         <div class="text-sm text-gray-600">
           <a
             class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-            href={getPermalink('/terms')}>Terms</a
+            href={getPermalink('/terms')}>Terminos y condiciones</a
           > ·
           <a
             class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-            href={getPermalink('/privacy')}>Privacy Policy</a
+            href={getPermalink('/privacy')}>Política de privacidad</a
           >
         </div>
       </div>
       {
         links.map(({ title, items }) => (
           <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="text-gray-800 dark:text-gray-300 font-medium mb-2">{title}</div>
+            <div class="text-gray-800 dark:text-gray-300 font-medium mb-2">
+              {title}
+            </div>
             {items && Array.isArray(items) && items.length > 0 && (
               <ul class="text-sm">
                 {items.map(({ title, href }) => (
@@ -116,12 +125,12 @@ const social = [
       </ul>
 
       <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
-        <span
-          class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"
+        Made by <a
+          class="text-brand-dark hover:underline dark:text-gray-200"
+          href="mailto:eosfelipe@majortom.space/"
         >
-        </span>
-        Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> ·
-        All rights reserved.
+          majortom</a
+        > · All rights reserved.
       </div>
     </div>
   </div>

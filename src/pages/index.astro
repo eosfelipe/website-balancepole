@@ -34,6 +34,7 @@ const featuresData = data
   });
 const leftData = featuresData.splice(0, featuresData.length / 2);
 const rightData = featuresData.splice(0, featuresData.length);
+const year = +new Date().getFullYear() - 2011;
 ---
 
 <Layout {meta}>
@@ -79,9 +80,10 @@ const rightData = featuresData.splice(0, featuresData.length);
   <!-- Content Widget **************** -->
 
   <Content
-    highlight="Inside template"
-    title="And what's inside? ..."
-    content="Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod tacimates."
+    highlight="Nosotros"
+    title="¿Quiénes Somos?"
+    content={`Somos el primer estudio de Pole Fitness especializado en la enseñanza de este deporte en la ciudad de Mérida, Yucatán. Contamos con ${year} años de experiencia y con el mejor equipo de instructores certificados Nacional e Internacionalmente  para tu mejor preparación en la práctica de este deporte.`}
+    idSection="about-us"
     items={[
       {
         title: 'Per ei quaeque sensibus',
@@ -100,8 +102,8 @@ const rightData = featuresData.splice(0, featuresData.length);
       },
     ]}
     image={{
-      src: import('~/assets/images/caos.jpg'),
-      alt: 'Colorful Image',
+      src: import('~/assets/images/about.jpg'),
+      alt: 'about balance pole',
     }}
   />
 
@@ -117,65 +119,68 @@ const rightData = featuresData.splice(0, featuresData.length);
   <!-- Content Widget **************** -->
 
   <Content
+    highlight="Más"
+    title="Servicios extras"
+    idSection="extra"
     isReversed
-    isAfterContent
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Fisioterapia',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Nutrición',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Cafetería',
       },
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Lashes',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Microblading',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Clases de danza para niños "Slide Studio"',
       },
     ]}
     image={{
-      src: import('~/assets/images/vintage.jpg'),
-      alt: 'Vintage Image',
+      src: import('~/assets/images/extra.jpg'),
+      alt: 'servicios extra',
     }}
   />
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Empieza hoy  mismo"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title:
+          'Paso 1: Ingresa a <a class="text-brand-light" href="https://balancepolefitness.com/client">https://balancepolefitness.com/client</a>',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
-        icon: 'tabler:package',
+          'Crea tu cuenta, ingresando tu correo electrónico y una contraseña',
+        icon: 'tabler:at',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
+        title: 'Paso 2: Elige tu(s) paquete(s)',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-        icon: 'tabler:letter-case',
+          'Selecciona el paquete de clases que desees: Pole, Aerial Skills o clases complementarias y confirma tu pago',
+        icon: 'tabler:box',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Paso 3: Elige tus clases y horarios',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
-        icon: 'tabler:paint',
+          'Selecciona las clases y horarios que desees del paquete que hayas adquirido',
+        icon: 'tabler:calendar',
       },
       {
-        title: 'Ready!',
+        title: 'Listo!',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: import('~/assets/images/creativity.jpg'),
-      alt: 'Steps image',
+      src: import('~/assets/images/steps.jpg'),
+      alt: 'pasos para registrarte',
     }}
   />
 
