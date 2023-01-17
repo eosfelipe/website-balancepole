@@ -1,4 +1,4 @@
-import defaultImage from './assets/images/default.png';
+import defaultImage from './assets/images/default.jpg';
 
 const CONFIG = {
   name: 'Balance Pole Fitness',
@@ -10,7 +10,8 @@ const CONFIG = {
   title: 'Balance Pole Fitness',
   description: 'Salón de Pole Fitness en Mérida Yucatán',
   defaultImage: defaultImage,
-
+  phone: '9992181660',
+  video: 'https://www.youtube.com/watch?v=4PDMoldRsxs',
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   language: 'en',

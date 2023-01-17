@@ -43,33 +43,30 @@ const year = +new Date().getFullYear() - 2011;
   <Hero
     callToAction={{
       text: 'Obtén tu clase muestra',
-      href: '#',
+      href: `https://wa.me/52${SITE.phone}`,
       icon: 'tabler:award',
     }}
-    callToAction2={{ text: 'Conócenos', href: '#features' }}
+    callToAction2="modal"
     image={{
       src: import('~/assets/images/hero.jpg'),
       alt: 'Hero Balance Pole Fitness',
     }}
   >
     <Fragment slot="title">
-      Your website with <span>Pole</span> + <span class="sm:whitespace-nowrap"
-        >Aerial</span
-      >
+      ¡Da el salto al mundo del pole fitness con nosotros!
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         <span
           class="font-semibold underline decoration-wavy decoration-1 decoration-primary-600 underline-offset-2"
-          >Balance Pole Fitness</span
-        > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non adipisci
-        dolore porro? <em>Pole</em> + <em>Aerial Skills</em>.</span
+          >¿Qué te detiene?</span
+        > En Balance tenemos clases de <em>Pole</em>, <em>Aerial Skills</em> y disciplinas
+        complementarias</span
       >
       <span class="block mb-1 sm:hidden font-bold text-primary-600"
         >Balance Pole Fitness.</span
-      > Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima maxime tempore
-      eligendi consequuntur!
+      >
     </Fragment>
   </Hero>
 
@@ -86,19 +83,16 @@ const year = +new Date().getFullYear() - 2011;
     idSection="about-us"
     items={[
       {
-        title: 'Per ei quaeque sensibus',
-        description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+        title:
+          'Instructores altamente capacitados y con experiencia en pole fitness',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
-        description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+        title:
+          'Una amplia variedad de clases y niveles para todos los interesados en pole fitness',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
-        description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+        title:
+          'Un ambiente de apoyo y comunidad para ayudarlo a alcanzar sus metas de pole fitness',
       },
     ]}
     image={{

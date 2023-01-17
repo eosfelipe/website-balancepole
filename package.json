@@ -45,5 +45,16 @@
   },
   "engines": {
     "node": "^14.15.0 || >=16.0.0"
+  },
+  "dependencies": {
+    "@astrojs/react": "^1.2.2",
+    "@headlessui/react": "^1.7.7",
+    "@nanostores/react": "^0.4.1",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "nanostores": "^0.7.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-social-media-embed": "^2.3.3"
   }
 }

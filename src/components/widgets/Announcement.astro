@@ -1,5 +1,5 @@
 ---
-import { getPermalink } from '~/utils/permalinks';
+import { SITE } from '~/config.mjs';
 ---
 
 <div
@@ -7,11 +7,12 @@ import { getPermalink } from '~/utils/permalinks';
 >
   <span
     class="text-sm py-1 px-1 bg-brand-dark dark:bg-brand-light text-gray-200 dark:text-gray-200 font-semibold"
-    >NEW</span
+    >Nuevo</span
   >
   <a
-    href={getPermalink('month-promotion', 'page')}
+    href={`https://wa.me/52${SITE.phone}`}
     class="hover:underline text-gray-200 dark:text-gray-200"
-    >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam? »</a
+    >¡No te pierdas nuestra oferta limitada! ¡Aprovecha nuestra promoción del
+    mes y obtén una clase muestra gratis! »</a
   >
 </div>
