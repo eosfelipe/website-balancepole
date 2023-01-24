@@ -178,73 +178,9 @@ const year = +new Date().getFullYear() - 2011;
     }}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    highlight="Components"
-    items={[
-      {
-        title: 'Headers',
-        description:
-          'In general, Headers contain information that makes it easier for visitors to interact with the website.',
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Display your product in action and how the Features actually create a solution for your target customer.',
-        icon: 'flat-color-icons:todo-list',
-      },
-      {
-        title: 'Content',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'icon-park:page-template',
-      },
-    ]}
-  />
-
   <!-- HighlightedPosts Widget ******* -->
 
-  <HighlightedPosts
+  <!-- <HighlightedPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
 			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
@@ -256,7 +192,7 @@ const year = +new Date().getFullYear() - 2011;
       'useful-resources-to-create-websites.md',
       'astrowind-template-in-depth.md',
     ]}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
@@ -306,33 +242,37 @@ const year = +new Date().getFullYear() - 2011;
   <!-- Stats Widget ****************** -->
 
   <Stats
+    title={'🤩'}
     items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
+      { name: 'Experiencia', value: '12 años' },
+      { name: 'Clientes', value: '+100' },
+      { name: 'Clases', value: '+14' },
+      { name: 'Mérida', value: '1' },
     ]}
   />
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
-    }}
-  >
-    <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap"
-        >Tailwind CSS</span
-      >
-    </Fragment>
+  <section class="scroll-mt-16" id="contact">
+    <CallToAction
+      callToAction={{
+        text: 'Escríbenos',
+        href: 'mailto:contacto@balancepolefitness.com?subject=Contact from website',
+        icon: 'tabler:mail',
+      }}
+    >
+      <Fragment slot="title">
+        Contacto + <br class="block sm:hidden" /><span
+          class="sm:whitespace-nowrap">Información</span
+        >
+      </Fragment>
 
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br
-        class="hidden md:inline"
-      />Don't waste more time! :P
-    </Fragment>
-  </CallToAction>
+      <Fragment slot="subtitle">
+        ¡Te invitamos a enviarnos un correo electrónico! Estaremos encantados de
+        responder cualquier pregunta o comentario que tenga. Por favor, envíe su
+        mensaje. <br class="hidden md:inline" />¡Esperamos escuchar de usted
+        pronto!
+      </Fragment>
+    </CallToAction>
+  </section>
 </Layout>

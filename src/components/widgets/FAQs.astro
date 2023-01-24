@@ -21,7 +21,7 @@ const {
 } = Astro.props;
 ---
 
-<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20 scroll-mt-16" id="faq">
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     {
       (title || subtitle || highlight) && (
@@ -38,7 +38,12 @@ const {
               set:html={title}
             />
           )}
-          {subtitle && <p class="max-w-3xl mx-auto text-xl text-gray-600 dark:text-slate-400" set:html={subtitle} />}
+          {subtitle && (
+            <p
+              class="max-w-3xl mx-auto text-xl text-gray-600 dark:text-slate-400"
+              set:html={subtitle}
+            />
+          )}
         </div>
       )
     }
@@ -52,10 +57,18 @@ const {
               {subitems.map(({ question, answer }) => (
                 <div>
                   <h3 class="mb-4 text-xl font-bold">
-                    <Icon name="tabler:arrow-down-right" class="w-7 h-7 text-primary-800 inline-block" />
+                    <Icon
+                      name="tabler:arrow-down-right"
+                      class="w-7 h-7 text-primary-800 inline-block"
+                    />
                     {question}
                   </h3>
-                  {answer && <div class="text-gray-700 dark:text-gray-400" set:html={answer} />}
+                  {answer && (
+                    <div
+                      class="text-gray-700 dark:text-gray-400"
+                      set:html={answer}
+                    />
+                  )}
                 </div>
               ))}
             </div>

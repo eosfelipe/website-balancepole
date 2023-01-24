@@ -4,46 +4,30 @@ import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 
 const links = [
   {
-    title: 'Product',
+    title: 'Extra',
     items: [
       { title: 'Features', href: '#' },
-      { title: 'Security', href: '#' },
       { title: 'Team', href: '#' },
-      { title: 'Enterprise', href: '#' },
       { title: 'Customer stories', href: '#' },
       { title: 'Pricing', href: '#' },
       { title: 'Resources', href: '#' },
     ],
   },
   {
-    title: 'Platform',
-    items: [
-      { title: 'Developer API', href: '#' },
-      { title: 'Partners', href: '#' },
-      { title: 'Atom', href: '#' },
-      { title: 'Electron', href: '#' },
-      { title: 'AstroWind Desktop', href: '#' },
-    ],
-  },
-  {
-    title: 'Support',
+    title: 'Soporte',
     items: [
       { title: 'Docs', href: '#' },
       { title: 'Community Forum', href: '#' },
       { title: 'Professional Services', href: '#' },
       { title: 'Skills', href: '#' },
-      { title: 'Status', href: '#' },
     ],
   },
   {
-    title: 'Company',
+    title: 'Estudio',
     items: [
       { title: 'About', href: '#' },
-      { title: 'Blog', href: '#' },
       { title: 'Careers', href: '#' },
       { title: 'Press', href: '#' },
-      { title: 'Inclusion', href: '#' },
-      { title: 'Social Impact', href: '#' },
       { title: 'Shop', href: '#' },
     ],
   },
@@ -67,12 +51,14 @@ const social = [
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
-        <div class="mb-2">
+        <div class="mb-2 text-center">
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}
-            >Balance Pole Fitness</a
+            ><div class="w-[250px]">
+              <img src="/logo.png" alt="balance pole fitness" />
+            </div></a
           >
         </div>
-        <div class="text-sm text-gray-600">
+        <div class="text-sm text-gray-600 text-center">
           <a
             class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
             href={getPermalink('/terms')}>Terminos y condiciones</a
@@ -127,7 +113,7 @@ const social = [
       <div class="text-sm text-gray-700 mr-4 dark:text-slate-400">
         Made by <a
           class="text-brand-dark hover:underline dark:text-gray-200"
-          href="mailto:eosfelipe@majortom.space/"
+          href="mailto:escobedo.felipe@hotmail.com?subject=Contact from balancepolefitness.com"
         >
           majortom</a
         > · All rights reserved.

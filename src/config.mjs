@@ -11,7 +11,7 @@ const CONFIG = {
   description: 'Salón de Pole Fitness en Mérida Yucatán',
   defaultImage: defaultImage,
   phone: '9992181660',
-  video: 'https://www.youtube.com/watch?v=4PDMoldRsxs',
+  video: 'https://www.youtube.com/watch?v=Z7aLJjoyZoc',
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   language: 'en',
