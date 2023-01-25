@@ -8,7 +8,7 @@ export default function ModalButton() {
       className="btn btn-primary w-full"
       onClick={() => isModalOpen.set(!$isModalOpen)}
     >
-      Recorrido
+      Nuestras instalaciones
     </button>
   );
 }

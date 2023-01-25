@@ -2,36 +2,38 @@
 import { Icon } from 'astro-icon';
 import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 
-const links = [
-  {
-    title: 'Extra',
-    items: [
-      { title: 'Features', href: '#' },
-      { title: 'Team', href: '#' },
-      { title: 'Customer stories', href: '#' },
-      { title: 'Pricing', href: '#' },
-      { title: 'Resources', href: '#' },
-    ],
-  },
-  {
-    title: 'Soporte',
-    items: [
-      { title: 'Docs', href: '#' },
-      { title: 'Community Forum', href: '#' },
-      { title: 'Professional Services', href: '#' },
-      { title: 'Skills', href: '#' },
-    ],
-  },
-  {
-    title: 'Estudio',
-    items: [
-      { title: 'About', href: '#' },
-      { title: 'Careers', href: '#' },
-      { title: 'Press', href: '#' },
-      { title: 'Shop', href: '#' },
-    ],
-  },
-];
+// const links = [
+//   {
+//     title: 'Extra',
+//     items: [
+//       { title: 'Features', href: '#' },
+//       { title: 'Team', href: '#' },
+//       { title: 'Customer stories', href: '#' },
+//       { title: 'Pricing', href: '#' },
+//       { title: 'Resources', href: '#' },
+//     ],
+//   },
+//   {
+//     title: 'Soporte',
+//     items: [
+//       { title: 'Docs', href: '#' },
+//       { title: 'Community Forum', href: '#' },
+//       { title: 'Professional Services', href: '#' },
+//       { title: 'Skills', href: '#' },
+//     ],
+//   },
+//   {
+//     title: 'Estudio',
+//     items: [
+//       { title: 'About', href: '#' },
+//       { title: 'Careers', href: '#' },
+//       { title: 'Press', href: '#' },
+//       { title: 'Shop', href: '#' },
+//     ],
+//   },
+// ];
+
+const links = [];
 
 const social = [
   {
@@ -49,7 +51,7 @@ const social = [
 
 <footer class="border-t border-gray-200 dark:border-slate-800">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+    <div class="grid grid-cols-1 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
       <div class="col-span-12 lg:col-span-4">
         <div class="mb-2 text-center">
           <a class="inline-block font-bold text-xl" href={getHomePermalink()}

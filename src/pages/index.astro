@@ -12,6 +12,7 @@ import HighlightedPosts from '~/components/blog/HighlightedPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Map from '~/components/react/Map';
 
 const meta = {
   title: SITE.title,
@@ -27,9 +28,9 @@ const featuresData = data
   .filter((d) => d.active === '1')
   .map((i) => {
     return {
-      title: `${i.type} - ${i.name}`,
+      title: `${i.type} ${i.name}`,
       description: i.description,
-      icon: 'tabler:bulb',
+      icon: 'tabler:flag',
     };
   });
 const leftData = featuresData.splice(0, featuresData.length / 2);
@@ -42,9 +43,9 @@ const year = +new Date().getFullYear() - 2011;
 
   <Hero
     callToAction={{
-      text: 'Obtén tu clase muestra',
-      href: `https://wa.me/52${SITE.phone}`,
-      icon: 'tabler:award',
+      text: 'Reserva tu clase prueba',
+      href: `https://wa.me/52${SITE.phone}?text=Website: `,
+      icon: 'tabler:brand-whatsapp',
     }}
     callToAction2="modal"
     image={{
@@ -53,7 +54,7 @@ const year = +new Date().getFullYear() - 2011;
     }}
   >
     <Fragment slot="title">
-      ¡Da el salto al mundo del pole fitness con nosotros!
+      ¡Conoce el mundo del pole fitness con nosotros!
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -93,6 +94,10 @@ const year = +new Date().getFullYear() - 2011;
       {
         title:
           'Un ambiente de apoyo y comunidad para ayudarlo a alcanzar sus metas de pole fitness',
+      },
+      {
+        title:
+          'Instalaciones de primer nivel con altura para entramiento profesional',
       },
     ]}
     image={{
@@ -136,6 +141,19 @@ const year = +new Date().getFullYear() - 2011;
       {
         title: 'Clases de danza para niños "Slide Studio"',
       },
+      {
+        title: 'Clases privadas',
+      },
+      {
+        title: 'Renta de pole y aro portátil x-pole',
+      },
+      {
+        title: 'Renta de salón para eventos privados',
+      },
+      {
+        title:
+          'Clase especial para despedida de soltera (en el estudio o domicilio)',
+      },
     ]}
     image={{
       src: import('~/assets/images/extra.jpg'),
@@ -146,11 +164,11 @@ const year = +new Date().getFullYear() - 2011;
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Empieza hoy  mismo"
+    title="Empieza hoy mismo"
     items={[
       {
         title:
-          'Paso 1: Ingresa a <a class="text-brand-light" href="https://balancepolefitness.com/client">https://balancepolefitness.com/</a>',
+          'Paso 1: Ingresa a <a class="text-brand-light" href="https://balancepolefitness.com/client">balancepolefitness.com/client</a>',
         description:
           'Crea tu cuenta, ingresando tu correo electrónico y una contraseña',
         icon: 'tabler:at',
@@ -158,11 +176,17 @@ const year = +new Date().getFullYear() - 2011;
       {
         title: 'Paso 2: Elige tu(s) paquete(s)',
         description:
-          'Selecciona el paquete de clases que desees: Pole, Aerial Skills o clases complementarias y confirma tu pago',
+          'Selecciona el paquete de clases que desees: Pole, Aerial Skills o clases complementarias',
         icon: 'tabler:box',
       },
       {
-        title: 'Paso 3: Elige tus clases y horarios',
+        title: 'Paso 3: Contáctanos para confirmar tu pago',
+        description:
+          'El pago puede ser en efectivo directo en el estudio o por medio de transferencia bancaria',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: 'Paso 4: Elige tus clases y horarios',
         description:
           'Selecciona las clases y horarios que desees del paquete que hayas adquirido',
         icon: 'tabler:calendar',
@@ -197,43 +221,38 @@ const year = +new Date().getFullYear() - 2011;
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    title="Preguntas frecuentes"
+    subtitle="Preguntas comunes de los clientes con el objetivo de proporcionar información rápida y fácil"
     highlight="FAQs"
     items={[
       [
         {
-          question: 'What do I need to start?',
+          question: '¿Necesito algún tipo de experiencia para iniciar?',
           answer:
-            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+            'No, en nuestras clases desarrollarás las bases para iniciar en cualquier disciplina, no importa si nunca has realizado actividad física.',
         },
         {
-          question: 'How to install the Astro + Tailwind CSS template?',
+          question: '¿Existe límite de edad?',
           answer:
-            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
+            'Nuestras clases son abiertas para todas las edades, trabajamos de acuerdo con tus capacidades.',
         },
         {
-          question: "What's something that you don't understand?",
+          question: '¿Puedo registrarme en cualquier clase del calendario?',
           answer:
-            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+            'Nuestras clases son multinivel, puedes agregarte a cualquier clase del calendario excepto las que se mencionan como avanzadas.',
         },
       ],
       [
         {
-          question: "What's an example of when you changed your mind?",
-          answer:
-            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-        },
-        {
-          question: 'What is something that you would like to try again?',
-          answer:
-            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-        },
-        {
           question:
-            'If you could only ask one question to each person you meet, what would that question be?',
+            '¿Dónde puedo adquirir los grips permitidos para las clases?',
           answer:
-            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+            'En el estudio podrás encontrar diferentes marcas y presentaciones de grips, guantes, tobilleras y rodilleras para tu práctica.',
+        },
+        {
+          question: '¿Es obligatorio asistir con uniforme a las clases?',
+          answer:
+            'No, sin embargo, recomendamos asistir con la ropa adecuada para tu práctica. En el estudio podrás encontrar el uniforme oficial.',
         },
       ],
     ]}
@@ -244,12 +263,16 @@ const year = +new Date().getFullYear() - 2011;
   <Stats
     title={'🤩'}
     items={[
+      { name: 'Mérida', value: '#1' },
       { name: 'Experiencia', value: '12 años' },
-      { name: 'Clientes', value: '+100' },
-      { name: 'Clases', value: '+14' },
-      { name: 'Mérida', value: '1' },
+      { name: 'Clases semanales', value: '+30' },
+      { name: 'Alumnas', value: '+100' },
     ]}
   />
+
+  <section class="scroll-mt-16" id="location">
+    <Map client:load />
+  </section>
 
   <!-- CallToAction Widget *********** -->
 
@@ -269,9 +292,9 @@ const year = +new Date().getFullYear() - 2011;
 
       <Fragment slot="subtitle">
         ¡Te invitamos a enviarnos un correo electrónico! Estaremos encantados de
-        responder cualquier pregunta o comentario que tenga. Por favor, envíe su
-        mensaje. <br class="hidden md:inline" />¡Esperamos escuchar de usted
-        pronto!
+        responder cualquier pregunta o comentario que tengas. <br
+          class="hidden md:inline"
+        /> También puedes visitar nuestras redes sociales
       </Fragment>
     </CallToAction>
   </section>
