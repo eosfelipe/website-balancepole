@@ -1,39 +1,104 @@
 ---
-import { SITE } from "~/config.mjs";
-import Layout from "~/layouts/PageLayout.astro";
-import Hero from "~/components/widgets/Hero.astro";
-import Note from "~/components/widgets/Note.astro";
-import Features from "~/components/widgets/Features.astro";
-import Steps from "~/components/widgets/Steps.astro";
-import Content from "~/components/widgets/Content.astro";
-import FAQs from "~/components/widgets/FAQs.astro";
-import Stats from "~/components/widgets/Stats.astro";
-import CallToAction from "~/components/widgets/CallToAction.astro";
-import Map from "~/components/react/Map";
-import { t, changeLanguage } from "i18next";
-import { Trans } from "astro-i18next/components";
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Map from '~/components/react/Map';
+import { t, changeLanguage } from 'i18next';
+import { Trans } from 'astro-i18next/components';
 
-changeLanguage("en");
+changeLanguage('en');
 
 const meta = {
-    title: t("site.title"),
-    description: t("site.description"),
-    dontUseTitleTemplate: true,
+  title: t('site.title'),
+  description: t('site.description'),
+  dontUseTitleTemplate: true,
 };
-const response = await fetch("https://balancepolefitness.com/n/public/api/lessons");
+const response = await fetch(
+  'https://balancepolefitness.com/n/public/api/lessons'
+);
 const data = await response.json();
 const featuresData = data
-    .filter((d) => d.active === "1")
-    .map((i) => {
+  .filter((d) => d.active === '1')
+  .map((i) => {
     return {
-        title: `${i.type} ${i.name}`,
-        description: i.description,
-        icon: "tabler:flag",
+      title: `${i.type} ${i.name}`,
+      description: i.description,
+      icon: 'tabler:flag',
     };
-});
+  });
 const leftData = featuresData.splice(0, featuresData.length / 2);
 const rightData = featuresData.splice(0, featuresData.length);
-const year = +new Date().getFullYear() - 2011;
+const leftData2 = [
+  {
+    title: 'Pole Fitness',
+    description:
+      'It focuses on strength training with the goal of carrying your own weight with ease and the mental construction to take control of your body',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Pole Tricks',
+    description:
+      'New tricks and combos regardless of your level we will improve the technique and quality of movement',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Pole Flow',
+    description:
+      'Connection of turns, tricks and dance in fluid sequences in order to achieve complete routines',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Pole Exotic',
+    description:
+      'Dance routines, movements, acrobatics and tricks on the pole, we will combine everything to discover your most sensual side. Bring your best heels!',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Flexibility',
+    description:
+      'You will learn the safe and proper technique to gain flexibility and take it to the next level',
+    icon: 'tabler:flag',
+  },
+];
+const rightData2 = [
+  {
+    title: 'Contemporary dance',
+    description:
+      'It is a dance lesson that seeks to express an idea, a feeling, an emotion, mixing body movements.',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Twerk',
+    description:
+      'We teach you complete routines and the technique of this discipline from the most basic',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Gap',
+    description:
+      'Gluteus, abdomen and leg clinic functional and focused exercises to strengthen and tone these muscles',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Aerial hoop',
+    description:
+      'Aerial hoop is a circular steel apparatus suspended from the ceiling, in which aerial acrobatics can be performed. The lesson is taught with a rotating system',
+    icon: 'tabler:flag',
+  },
+  {
+    title: 'Aerial hammock',
+    description:
+      'Aerial hammock is basically a swing you will have the support to support your weight, you will make progress in a short period of time compared to fabrics that are usually more difficult to hold on with arm strength',
+    icon: 'tabler:flag',
+  },
+];
 ---
 
 <Layout {meta}>
@@ -109,7 +174,7 @@ const year = +new Date().getFullYear() - 2011;
     highlight={t('features.highlight')}
     title={t('features.title')}
     subtitle={t('features.description')}
-    items={[leftData, rightData]}
+    items={[leftData2, rightData2]}
   />
 
   <!-- Content Widget **************** -->
