@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 import { getHomePermalink, getPermalink } from '~/utils/permalinks';
+import { t } from 'i18next';
 
 // const links = [
 //   {
@@ -63,11 +64,11 @@ const social = [
         <div class="text-sm text-gray-600 text-center">
           <a
             class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-            href={getPermalink('/terms')}>Terminos y condiciones</a
+            href={getPermalink('/terms')}>{t('terms.text')}</a
           > ·
           <a
             class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-            href={getPermalink('/privacy')}>Política de privacidad</a
+            href={getPermalink('/privacy')}>{t('terms.text2')}</a
           >
         </div>
       </div>

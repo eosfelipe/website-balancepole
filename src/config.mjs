@@ -8,7 +8,7 @@ const CONFIG = {
   trailingSlash: false,
 
   title: 'Balance Pole Fitness',
-  description: 'Salón de Pole Fitness en Mérida Yucatán',
+  description: 'Primera escuela de Pole Fitness en Mérida Yucatán',
   defaultImage: defaultImage,
   phone: '9992181660',
   video: 'https://www.youtube.com/watch?v=Z7aLJjoyZoc',
@@ -24,7 +24,7 @@ const CONFIG = {
     timeZone: 'UTC',
   }),
 
-  googleAnalyticsId: false, // or "UA-67579025-1",
+  googleAnalyticsId: 'UA-67579025-1', // or "UA-67579025-1",
   googleSiteVerificationId: 'iR3LWUsqqvs3IyWQIax9qC0pMkEloM9FE-BMGgki4Nk',
 
   blog: {

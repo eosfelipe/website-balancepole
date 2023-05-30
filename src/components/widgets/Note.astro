@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
+import { t } from 'i18next';
 ---
 
 <section class="bg-brand-light dark:bg-brand-dark">
@@ -11,6 +12,7 @@ import { Icon } from 'astro-icon';
         name="tabler:info-square"
         class="w-5 h-5 inline-block align-text-bottom"
       /> #LoveBalancePole:</span
-    > Comienza a ser parte de una comunidad exclusiva para practicar pole fitness
+    >
+    {t('note.text')}
   </div>
 </section>

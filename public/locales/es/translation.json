@@ -1,0 +1,130 @@
+{
+  "site": {
+    "title": "Balance Pole Fitness",
+    "description": "Primera escuela de Pole Fitness en Mérida Yucatán"
+  },
+  "announcement": {
+    "text": "¡No te pierdas nuestra oferta limitada! ¡Aprovecha nuestra promoción del mes y obtén una clase muestra gratis!",
+    "label": "Nuevo"
+  },
+  "hero": {
+    "title": "¡Conoce el mundo del pole fitness con nosotros!",
+    "subtitle": "¿Qué te detiene?",
+    "description": "En Balance tenemos clases de <0>Pole</0>, <1>Aerial Skills</1> y disciplinas complementarias",
+    "button1": "Reserva tu clase prueba",
+    "button2": "Recorrido virtual"
+  },
+  "header": {
+    "about": "¿Quiénes somos?",
+    "lessons": "Clases",
+    "app": "App",
+    "faq": "FAQ",
+    "location": "Ubicación",
+    "contact": "Contacto"
+  },
+  "note": {
+    "text": "Comienza a ser parte de una comunidad exclusiva para practicar pole fitness"
+  },
+  "about": {
+    "title": "Nosotros",
+    "description": "Somos el primer estudio de Pole Fitness especializado en la enseñanza de este deporte en la ciudad de Mérida, Yucatán. Contamos con +12 años de experiencia y con el mejor equipo de instructores certificados Nacional e Internacionalmente para tu mejor preparación en la práctica de este deporte.",
+    "item1": "Instructores altamente capacitados y con experiencia en pole fitness",
+    "item2": "Una amplia variedad de clases y niveles para todos los interesados en pole fitness",
+    "item3": "Un ambiente de apoyo y comunidad para ayudarlo a alcanzar sus metas de pole fitness",
+    "item4": "Instalaciones de primer nivel con altura para entrenamiento profesional"
+  },
+  "features": {
+    "highlight": "Clases",
+    "title": "Nuestras Clases",
+    "description": "Todas nuestras clases son impartidas por instructoras capacitadas y en constante entrenamiento. Te describimos los diferentes estilos de pole que impartimos y recomendamos ampliamente darle importancia a las clases complementarias para mejorar tu rendimiento en el Pole"
+  },
+  "content": {
+    "highlight": "Más",
+    "title": "Servicios extras",
+    "item1": "Fisioterapia",
+    "item2": "Nutrición",
+    "item3": "Cafetería",
+    "item4": "Lashes",
+    "item5": "Microblading",
+    "item6": "Clases de danza para niños 'Slide Studio'",
+    "item7": "Clases privadas",
+    "item8": "Renta de pole y aro portátil x-pole",
+    "item9": "Renta de salón para eventos privados",
+    "item10": "Clase especial para despedida de soltera (estudio o domicilio)"
+  },
+  "steps": {
+    "title": "Empieza hoy mismo",
+    "item1": {
+      "title": "Paso 1: Ingresa a balancepolefitness.com/client",
+      "description": "Crea tu cuenta, ingresando tu correo electrónico y una contraseña"
+    },
+    "item2": {
+      "title": "Paso 2: Elige tu(s) paquete(s)",
+      "description": "Selecciona el paquete de clases que desees: Pole, Aerial Skills o clases complementarias"
+    },
+    "item3": {
+      "title": "Paso 3: Contáctanos para confirmar tu pago",
+      "description": "El pago puede ser en efectivo directo en el estudio o por medio de transferencia bancaria"
+    },
+    "item4": {
+      "title": "Paso 4: Elige tus clases y horarios",
+      "description": "Selecciona las clases y horarios que desees del paquete que hayas adquirido"
+    },
+    "item5": {
+      "title": "Listo"
+    }
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Preguntas comunes de los clientes con el objetivo de proporcionar información rápida y fácil",
+    "item1": {
+      "title": "¿Necesito algún tipo de experiencia para iniciar?",
+      "description": "No, en nuestras clases desarrollarás las bases para iniciar en cualquier disciplina, no importa si nunca has realizado actividad física."
+    },
+    "item2": {
+      "title": "¿Existe límite de edad?",
+      "description": "Nuestras clases son abiertas para todas las edades, trabajamos de acuerdo con tus capacidades."
+    },
+    "item3": {
+      "title": "¿Puedo registrarme en cualquier clase del calendario?",
+      "description": "Nuestras clases son multinivel, puedes agregarte a cualquier clase del calendario excepto las que se mencionan como avanzadas."
+    },
+    "item4": {
+      "title": "¿Dónde puedo adquirir los grips permitidos para las clases?",
+      "description": "En el estudio podrás encontrar diferentes marcas y presentaciones de grips, guantes, tobilleras y rodilleras para tu práctica."
+    },
+    "item5": {
+      "title": "¿Es obligatorio asistir con uniforme a las clases?",
+      "description": "No, sin embargo, recomendamos asistir con la ropa adecuada para tu práctica. En el estudio podrás encontrar el uniforme oficial."
+    }
+  },
+  "stats": {
+    "item1": {
+      "name": "Experiencia",
+      "value": "12 años"
+    },
+    "item2": {
+      "name": "Clases semanales",
+      "value": "+30"
+    },
+    "item3": {
+      "name": "Alumnas",
+      "value": "+100"
+    }
+  },
+  "location": {
+    "title": "Ubicación",
+    "subtitle": "Calle 28 #354 por 33 y 35, Emiliano Zapata Nte, 97129, Mérida, Yuc."
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Información",
+    "description": "¡Te invitamos a enviarnos un correo electrónico! Estaremos encantados de responder cualquier pregunta o comentario que tengas.",
+    "footer": "También puedes visitar nuestras redes sociales.",
+    "button": "Escríbenos"
+  },
+  "terms": {
+    "text": "Términos y condiciones",
+    "text2": "Política de privacidad"
+  }
+}

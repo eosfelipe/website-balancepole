@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
+import { type DefaultTFuncReturn } from 'i18next';
 
 interface Item {
   title: string;
@@ -8,9 +9,9 @@ interface Item {
 }
 
 export interface Props {
-  title?: string;
-  subtitle?: string;
-  highlight?: string;
+  title?: string | DefaultTFuncReturn;
+  subtitle?: string | DefaultTFuncReturn;
+  highlight?: string | DefaultTFuncReturn;
   items: Array<Array<Item>>;
 }
 

@@ -5,6 +5,7 @@ import { YouTubeEmbed } from 'react-social-media-embed';
 import { isModalOpen } from './modalStore';
 import Poster from '~/assets/images/poster.jpg';
 import { SITE } from '~/config.mjs';
+import { t } from 'i18next';
 
 export default function Modal() {
   const $isModalOpen = useStore(isModalOpen);
@@ -60,7 +61,7 @@ export default function Modal() {
                       as="h3"
                       className="text-lg leading-6 font-medium text-gray-900"
                     >
-                      Recorrido Balance
+                      Video
                     </Dialog.Title>
                     <div className="mt-2">
                       <YouTubeEmbed

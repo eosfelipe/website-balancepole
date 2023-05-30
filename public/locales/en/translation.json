@@ -1,0 +1,130 @@
+{
+  "site": {
+    "title": "Balance Pole Fitness",
+    "description": "First Pole Fitness school in Mérida Yucatán"
+  },
+  "announcement": {
+    "text": "Don't miss out on our limited offer! Take advantage of our promotion of the month and get a free sample class!",
+    "label": "New"
+  },
+  "hero": {
+    "title": "Get to know the world of pole fitness with us!",
+    "subtitle": "What's stopping you?",
+    "description": "At Balance we have <0>Pole</0>, <1>Aerial Skills</1> classes and complementary disciplines",
+    "button1": "Book your trial class",
+    "button2": "Virtual tour"
+  },
+  "header": {
+    "about": "About Us",
+    "lessons": "Lessons",
+    "app": "App",
+    "faq": "FAQ",
+    "location": "Location",
+    "contact": "Contact"
+  },
+  "note": {
+    "text": "Become part of an exclusive community to practice pole fitness"
+  },
+  "about": {
+    "title": "Pole Studio",
+    "description": "We are the first Pole Fitness studio specialized in teaching this sport in the city of Mérida, Yucatán. We have +12 years of experience and the best team of Nationally and Internationally certified instructors for your best preparation in the practice of this sport.",
+    "item1": "Highly trained and experienced pole fitness instructors",
+    "item2": "A wide variety of classes and levels for everyone interested in pole fitness",
+    "item3": "A supportive environment and community to help you achieve your pole fitness goals",
+    "item4": "First-class facilities with height for professional training"
+  },
+  "features": {
+    "highlight": "Lessons",
+    "title": "Our Lessons",
+    "description": "All our lessons are taught by trained instructors who are in constant training. We describe the different styles of pole that we teach and we highly recommend giving importance to the complementary lessons to improve your performance on Pole"
+  },
+  "content": {
+    "highlight": "More services",
+    "title": "Extra",
+    "item1": "Physiotherapy",
+    "item2": "Nutrition",
+    "item3": "Snack bar",
+    "item4": "Lashes",
+    "item5": "Microblading",
+    "item6": "Dance lessons for kids 'Slide Studio'",
+    "item7": "Private lessons",
+    "item8": "Rental of portable pole and hoop brand x-pole",
+    "item9": "Hall rental for private events",
+    "item10": "Special lesson for hen party (studio or home)"
+  },
+  "steps": {
+    "title": "Start today",
+    "item1": {
+      "title": "Step 1: Go to balancepolefitness.com/client",
+      "description": "Create your account, with an email and a password"
+    },
+    "item2": {
+      "title": "Step 2: Choose your package(s)",
+      "description": "Select the lesson package you want: Pole, Aerial Skills or complementary lessons"
+    },
+    "item3": {
+      "title": "Step 3: Contact us to confirm your payment",
+      "description": "Payment can be in direct cash at the studio or by bank transfer"
+    },
+    "item4": {
+      "title": "Step 4: Choose your lessons and schedules",
+      "description": "Select the lessons and times you want from the package you have purchased"
+    },
+    "item5": {
+      "title": "OK"
+    }
+  },
+  "faqs": {
+    "title": "Frequently asked questions",
+    "subtitle": "Common customer questions for the purpose of providing quick and easy information",
+    "item1": {
+      "title": "Do I need any kind of experience to start?",
+      "description": "No, in our lessons you will learn the basics to start in any discipline, it does not matter if you have never done physical activity."
+    },
+    "item2": {
+      "title": "Is there an age limit?",
+      "description": "Our lessons are open to all ages, we work according to your abilities."
+    },
+    "item3": {
+      "title": "Can I register for any lesson on the schedule?",
+      "description": "Our lessons are multilevel, you can join any class on the schedule except those mentioned as advanced."
+    },
+    "item4": {
+      "title": "Where can I buy the grips allowed for the lessons?",
+      "description": "In the studio you will be able to find different brands and presentations of grips, gloves, anklets and knee pads for your practice."
+    },
+    "item5": {
+      "title": "Is it mandatory to attend classes in uniform?",
+      "description": "No, however, we recommend attending with the appropriate clothing for your practice. In the studio you can find the official uniform."
+    }
+  },
+  "stats": {
+    "item1": {
+      "name": "Experience",
+      "value": "12 years"
+    },
+    "item2": {
+      "name": "Weekly lessons",
+      "value": "+30"
+    },
+    "item3": {
+      "name": "Students",
+      "value": "+100"
+    }
+  },
+  "location": {
+    "title": "Location",
+    "subtitle": "28 street #354 between 33 and 35, Emiliano Zapata Nte, 97129, Mérida, Yuc."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Information",
+    "description": "We invite you to send us an email! We will be happy to answer any questions or comments you have.",
+    "footer": "You can also visit our social networks.",
+    "button": "Write to us"
+  },
+  "terms": {
+    "text": "Terms and Conditions",
+    "text2": "Privacy Policy"
+  }
+}

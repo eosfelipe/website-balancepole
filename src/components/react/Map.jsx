@@ -1,9 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
+import {t} from 'i18next'
+
 mapboxgl.accessToken =
   'pk.eyJ1IjoiZW9zZmVsaXBlIiwiYSI6ImNsZGJ1dDhubDAxN3Qzd3FoMDZmNm5udzIifQ.DWjc_jE2zSY0IUOLKQo94Q';
 
-export default function Map() {
+export default function Map({title,subtitle}) {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lat, setLat] = useState(21.01026535013217);
@@ -41,10 +43,10 @@ export default function Map() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
           <h2 className="max-w-lg mb-4 text-3xl font-bold leading-none md:tracking-tight sm:text-4xl md:mx-auto font-heading text-center">
-            Ubicación
+            {title}
           </h2>
           <h3 className="mb-4 text-xl font-bold text-center">
-            Calle 28 #354 por 33 y 35, Emiliano Zapata Nte, 97129, Mérida, Yuc.
+            {subtitle}
           </h3>
           <div className="max-w-3xl mx-auto p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
             <div ref={mapContainer} className="w-full h-[400px]"></div>

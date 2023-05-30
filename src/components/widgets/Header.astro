@@ -6,26 +6,27 @@ import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
 import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 import { SITE } from '~/config.mjs';
+import { t } from 'i18next';
 
 const links = [
   {
-    text: '¿Quiénes somos?',
+    text: t('header.about'),
     href: '#about-us',
   },
   {
-    text: 'Clases',
+    text: t('header.lessons'),
     href: '#classes',
   },
   {
-    text: 'App',
+    text: t('header.app'),
     href: '#steps',
   },
   {
-    text: 'FAQ',
+    text: t('header.faq'),
     href: '#faq',
   },
   {
-    text: 'Ubicación',
+    text: t('header.location'),
     href: '#location',
   },
   // {
@@ -120,7 +121,7 @@ const links = [
           }
           <a
             class="btn w-full ml-3 py-2.5 px-5 font-semibold text-gray-600 shadow-none text-sm"
-            href="#contact">Contacto</a
+            href="#contact">{t('header.contact')}</a
           >
         </div>
       </div>

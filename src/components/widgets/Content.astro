@@ -1,6 +1,7 @@
 ---
 import Icon from 'astro-icon';
 import { Picture } from '@astrojs/image/components';
+import { type DefaultTFuncReturn } from 'i18next';
 
 interface Item {
   title: string;
@@ -9,10 +10,10 @@ interface Item {
 }
 
 export interface Props {
-  title?: string;
+  title?: string | DefaultTFuncReturn;
   subtitle?: string;
-  highlight?: string;
-  content?: string;
+  highlight?: string | DefaultTFuncReturn;
+  content?: string | DefaultTFuncReturn;
   idSection?: string;
   items?: Array<Item>;
   image?: string | any; // TODO: find HTMLElementProps

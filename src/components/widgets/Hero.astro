@@ -6,8 +6,9 @@ import Modal from '../react/Modal';
 
 interface CallToAction {
   text: string;
-  href: string;
+  href?: string;
   icon?: string;
+  type?: string;
 }
 
 export interface Props {
@@ -22,7 +23,7 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   callToAction = await Astro.slots.render('callToAction'),
-  callToAction2 = await Astro.slots.render('callToAction2'),
+  callToAction2,
   image = await Astro.slots.render('image'),
 } = Astro.props;
 ---
@@ -80,21 +81,9 @@ const {
             {
               callToAction2 && (
                 <div class="flex w-full sm:w-auto">
-                  {typeof callToAction2 === 'string' ? (
+                  {typeof callToAction2 === 'object' && (
                     // <Fragment set:html={callToAction2} />
-                    <ModalButton client:load />
-                  ) : (
-                    <a class="btn btn-ghost w-full" href={callToAction2?.href}>
-                      {callToAction2?.icon && (
-                        <>
-                          <Icon
-                            name={callToAction2.icon}
-                            class="w-5 h-5 mr-1 -ml-1.5"
-                          />{' '}
-                        </>
-                      )}
-                      {callToAction2.text}
-                    </a>
+                    <ModalButton data={callToAction2} client:load />
                   )}
                 </div>
               )
