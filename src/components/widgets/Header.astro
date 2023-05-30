@@ -7,6 +7,7 @@ import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 import { SITE } from '~/config.mjs';
 import { t } from 'i18next';
+import { LanguageSelector } from 'astro-i18next/components';
 
 const links = [
   {
@@ -68,6 +69,12 @@ const links = [
       <ul
         class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base"
       >
+        <li>
+          <LanguageSelector
+            showFlag={false}
+            class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out md:hidden"
+          />
+        </li>
         {
           links.map(({ text, href, links }) => (
             <li class={links?.length ? 'dropdown' : ''}>
@@ -107,6 +114,14 @@ const links = [
       </ul>
       <div class="md:self-center flex items-center md:mb-0 ml-4">
         <div class="hidden items-center md:flex">
+          <a
+            class="btn w-full mx-3 py-2.5 px-5 font-semibold text-gray-600 shadow-none text-sm"
+            href="#contact">{t('header.contact')}</a
+          >
+          <LanguageSelector
+            showFlag={false}
+            class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out mx-3"
+          />
           <ToggleTheme iconClass="w-5 h-5" />
           {
             SITE.blog && (
@@ -119,10 +134,6 @@ const links = [
               </a>
             )
           }
-          <a
-            class="btn w-full ml-3 py-2.5 px-5 font-semibold text-gray-600 shadow-none text-sm"
-            href="#contact">{t('header.contact')}</a
-          >
         </div>
       </div>
     </nav>
